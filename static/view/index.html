@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jsmpeg Demo</title>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    #videoWrapper {
+      margin: 20px auto;
+      width: 640px;
+      height: 360px;
+    }
+  </style>
+</head>
+<body>
+<h1>Jsmpeg Demo</h1>
+<div id="videoWrapper"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsmpeg-player@2/build/JSMpeg.min.js"></script>
+
+<script>
+  var videoUrl = 'ws://' + document.location.hostname + ':8082/';
+  var video = new JSMpeg.VideoElement('#videoWrapper', videoUrl);
+
+  console.log(video);
+</script>
+</body>
+</html>
